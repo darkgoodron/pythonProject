@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: aiogram-dialog
+Version: 1.4.1
+Summary: Mini-framework for dialogs on top of aiogram
+Home-page: https://github.com/tishka17/aiogram_dialog
+Author: A. Tikhonov
+Author-email: 17@itishka.org
+License: Apache2
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: aiogram (<3,>=2.12)
+Requires-Dist: jinja2
+Requires-Dist: cachetools (==4.*)
+Requires-Dist: magic-filter
+Provides-Extra: tools
+Requires-Dist: diagrams ; extra == 'tools'
+
+UNKNOWN
+

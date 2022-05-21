@@ -1,17 +1,16 @@
-# This is a sample Python script.
+async def on_startup(dp):
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    from utils.notify_admins import on_startup_notify
+    await on_startup_notify(dp)
+
+    from utils.set_bot_commands import set_default_commands
+    await set_default_commands(dp)
+
+    print('Bot started')
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    from aiogram import executor
+    from handlers import dp
 
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    executor.start_polling(dp, on_startup=on_startup)
